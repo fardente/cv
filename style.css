@@ -80,6 +80,20 @@ h4 {
     overflow: hidden;
     border-radius: 50%;
     margin: 2rem auto;
+    animation: 0.7s photo ease-in-out;
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes photo {
+    from {
+        transform: scale(0.3);
+    }
+    60% {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(1);
+    }
 }
 
 .photo img {
@@ -97,6 +111,16 @@ h4 {
     margin-top: 2rem;
     margin-left: 1rem;
     /* background-color: #faf8f6; */
+    animation: 3s title ease-in;
+}
+
+@keyframes title {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .title h1 {
@@ -141,10 +165,22 @@ aside {
     margin: 10px 0;
 }
 
+.skill-box {
+    margin-top: 1rem;
+    text-align: start;
+    font-size: 0.8rem;
+}
+
 .edu-box {
     margin-top: 1rem;
     text-align: start;
+    font-size: 0.8rem;
     /* border-left: 1px dotted #6f6d6c; */
+}
+
+.edu-box li {
+    list-style: circle;
+    margin-left: 10px;
 }
 
 svg {
@@ -163,6 +199,16 @@ main {
 article {
     margin: 0 1rem;
     padding: 0 1rem;
+    animation: articles 2s ease-in-out;
+}
+
+@keyframes articles {
+    from {
+        transform: translateX(200px);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 article h2 {
@@ -200,7 +246,7 @@ article p {
 }
 
 .work-box li {
-    margin-left: 1rem;
+    margin-left: 2rem;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     -ms-hyphens: auto;
