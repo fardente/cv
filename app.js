@@ -22,7 +22,21 @@ tl.set(".title h1", { zIndex: 400, delay: 0.1 })
     )
     .from("body", {
         overflow: "hidden",
-    });
+    })
+    .fromTo(
+        ".photo-wrapper",
+        {
+            scale: 0.6,
+            ease: "back.in",
+            duration: 0.8,
+        },
+        {
+            scale: 1,
+            duration: 0.8,
+            ease: "back.out",
+        },
+        "-=1.5"
+    );
 // .fromTo(
 //     ".loading",
 //     {
